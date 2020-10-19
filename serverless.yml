@@ -6,8 +6,16 @@ provider:
   name: aws
   runtime: nodejs12.x
   stage: dev
-  profile: sls-cli
+  profile: sls
   region: eu-west-3
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:Scan
+      Resource:
+        - arn:aws:dynamodb:eu-west-3:729503035905:table/themes
 
 functions:
   templates:
