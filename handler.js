@@ -17,10 +17,10 @@ module.exports.themes = async (_, context, callback) => {
 };
 
 const getThemes = () => {
-    const params = {
+    const query = {
         TableName: config.TableName,
         Limit: 10,
     };
 
-    return ddb.scan(params).promise();
+    return ddb.scan(query).promise();
 };

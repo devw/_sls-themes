@@ -9,6 +9,8 @@
     "deploy": "sls deploy --stage dev --verbose"
   },
   "devDependencies": {
-    "aws-sdk": "^2.773.0"
-  }
+    "aws-sdk": "^2.773.0",
+    "serverless-iam-roles-per-function": "^2.0.2"
+  },
+  "dependencies": {}
 }
