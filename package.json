@@ -1,0 +1,14 @@
+{
+  "name": "sls-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Antonio Pierro <antonio.pierro@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "invoke": "sls invoke local -f templates",
+    "deploy": "sls deploy --stage dev --verbose"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.773.0"
+  }
+}
